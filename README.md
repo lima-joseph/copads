@@ -2,6 +2,9 @@
 
 Este projeto é uma página web para resgate de conquistas, onde os usuários podem inserir códigos para desbloquear conquistas específicas. Quando todas as conquistas são resgatadas, uma mensagem de vitória aparece na tela, juntamente com um ícone de celebração.
 
+Ver no GitHub Pages:
+**https://lima-joseph.github.io/copads/testes.html
+
 ## Funcionalidades
 
 - **Resgate de Conquistas**: Os usuários podem resgatar conquistas inserindo códigos válidos.
