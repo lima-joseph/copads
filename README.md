@@ -48,30 +48,4 @@ Os códigos de conquistas válidos e seus botões correspondentes são:
   <input type="text" id="code-input" placeholder="Insira o código">
   <button id="submitBtn">Resgatar</button>
 </section>
-Tecnologias Usadas
-HTML5: Estrutura da página.
-CSS3: Estilização da interface.
-JavaScript: Lógica de interatividade e armazenamento.
-LocalStorage: Para salvar o progresso do usuário no navegador.
-Como Executar o Projeto
-Faça o download ou clone o repositório.
-Abra o arquivo index.html no seu navegador.
-Insira um dos códigos válidos no campo de resgate e clique em "Resgatar" para desbloquear as conquistas.
-Melhorias Futuras
-Adicionar novos códigos e conquistas.
-Implementar um sistema de pontuação ou ranking.
-Incluir animações para tornar a interação mais dinâmica.
-Desenvolvido com ♥ para eventos e interações de conquistas.
 
-markdown
-Copy code
-
-### O que o `README.md` cobre:
-1. **Descrição do projeto**: Explica a funcionalidade principal da página.
-2. **Funcionalidades**: Detalha o que a página faz.
-3. **Como usar**: Explica ao usuário como utilizar o sistema.
-4. **Estrutura do código**: Breve resumo da organização do código HTML, CSS e JavaScript.
-5. **Exemplo de código**: Trecho de HTML para ilustrar como os elementos são estruturados.
-6. **Tecnologias usadas**: Lista de tecnologias aplicadas no projeto.
-7. **Como executar**: Instruções de como rodar a página localmente.
-8. **Melhorias futuras**: Sugestões para evoluir o projeto.
