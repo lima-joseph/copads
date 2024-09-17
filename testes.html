@@ -6,8 +6,399 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.cotil.unicamp.br&size=16">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #c9cdfd;
+            color: #333;
+            flex-direction: column;
+            display: flex;
+            min-height: 100vh;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 375px;
+            background-color: #ffffff;
+            border-radius: 8%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #6b72ec;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            height: 200px;
+        }
+
+        .rescue-section {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .rescue-section h1 {
+            font-size: 1.7em;
+            color: #6b72ec;
+            margin-bottom: 10px;
+        }
+
+        .rescue-section p {
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+
+        button#submitBtn {
+            background-color: #6b72ec;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button#submitBtn:hover {
+            background-color: #8287e9;
+        }
+
+        .badges-section {
+            padding: 20px;
+        }
+
+        .badges-section h2 {
+            font-size: 1.6em;
+            color: #6b72ec;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .badge-card {
+            background-color: #f1f3ff;
+            border: 5px solid #babbf6;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .badge-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+
+        .badge-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .badge-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .badge-info p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+
+        .badge-button .checkmark {
+            margin-left: 5px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #6b72ec;
+            /* Cor da borda ao focar */
+            box-shadow: 0 0 5px rgba(107, 114, 236, 0.5);
+            /* Adiciona um leve brilho */
+            outline: none;
+            /* Remove a borda padrão do navegador */
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 30px;
+            /* Ajuste a distância do fundo conforme necessário */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            /* Garante que o botão esteja acima de outros conteúdos */
+        }
+
+        .instagram-button {
+            align-items: center;
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 25px;
+            color: #fff;
+            background-color: #6b72ec;
+            /* Cor do Instagram */
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: pulsing 0.7s infinite alternate;
+        }
+
+
+        @keyframes pulsing {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+                background-color: #8287e9;
+                /* Cor do Instagram quando o botão é hover */
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
+        .fa-instagram {
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        /* Responsiveness */
+        @media (min-width: 768px) {
+            header {
+                height: 200px;
+            }
+            .container {
+                max-width: 350px;
+            }
+
+            .badge-card {
+                padding: 40px;
+                border-radius: 40px;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .badge-image {
+                width: 40%;
+                max-width: 50%;
+            }
+
+            .badge-info {
+                width: 60%;
+                text-align: center;
+            }
+
+            .badge-info h3 {
+                font-size: 2.3em;
+                margin-bottom: 5px;
+
+            }
+
+            .badge-info p {
+                text-align: justify;
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+
+            .badge-button {
+                background-color: #32ce57;
+                border: 3px #32ce57 solid;
+                color: white;
+                padding: 10px;
+                border-radius: 20px;
+                font-size: 2em;
+                font-weight: bold;
+                width: 100%;
+            }
+
+            .conquered {
+                background-color: #f1f3ff;
+                color: #6b72ec;
+                border: 3px #6b72ec solid;
+                width: 100%;
+            }
+
+            .badges-section h2 {
+                font-size: 3em;
+                color: #6b72ec;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .rescue-section h1 {
+                font-size: 4em;
+                color: #6b72ec;
+                margin-bottom: 10px;
+            }
+
+            button#submitBtn {
+                font-size: 2.6em;
+                padding: 20px;
+                letter-spacing: 1;
+            }
+            .rescue-section p {
+                margin-bottom: 25px;
+                font-size: 2.3em;
+            }
+            input[type="text"] {
+                flex: 1;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 30px 20px;
+                margin-bottom: 30px;
+                font-size: 2.1em;
+            }
+
+            .instagram-button {
+                align-items: center;
+                display: inline-block;
+                padding: 20px 20px;
+                font-size: 33px;
+                width: auto;
+                color: #fff;
+                background-color: #6b72ec;
+                /* Cor do Instagram */
+                text-decoration: none;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                animation: pulsing 0.7s infinite alternate;
+            }
+
+            footer {
+                height: 430px;
+                background-color: #6b72ec;
+                color: white;
+                border-radius: 70px 70px 0px 0px;
+                text-align: center;
+
+            }
+            footer .first h2 {
+                padding-top: 30px;
+                font-size: 3.5em;
+            }
+            footer .first p {
+                font-size: 2.5em;
+            }
+
+            footer .second p {
+                font-size: 2em;
+            }
+
+            .first p a {
+                background-color: #babbf6;
+                padding: 10px 20px;
+                border-radius: 50px;
+                color: #6b72ec;
+            }
+            .first {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 40px;
+                border-bottom: 1px solid white;
+            }
+
+            .padding {
+                padding: 20px;
+            }
+
+            .finished-section {
+                background-color: white;
+                padding: 40px;
+                border-radius: 40px;
+                border: 5px solid #babbf6;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .finished-section h1 {
+                text-align: center;
+                color: #6b72ec;
+                font-size: 2.5em;
+                margin-bottom: 5px;
+            }
+            .finished-section p {
+                text-align: center;
+                border-radius: 8px;
+                color: #000000;
+                font-size: 1.7em;
+                padding: 5px 50px;
+                margin-bottom: 25px;
+            }
+            main {
+                min-height: 1200px;
+                max-height: auto;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #btnMostrar {
+                background-color: #6b72ec;
+                border: solid 5px #6b72ec;
+                color: white;
+                padding: 10px;
+                border-radius: 20px;
+                font-size: 2em;
+                font-weight: bold;
+                width: 100%;
+            }
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #c9cdfd;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #6b72ec;
+            border-radius: 10px;
+            border: 2px solid #babbf6;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #8287e9;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: #babbf6;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,7 +467,75 @@
         </a>
     </div>
 
-    <script src="/assets/js/app.js">
+    <script>
+        const codes = {
+            "TOURLAB": "btnBadge1",
+            "PROJARD": "btnBadge2",
+            "TCCVETS": "btnBadge3"
+        };
+
+        function loadBadges() {
+            for (const code in codes) {
+                if (localStorage.getItem(codes[code]) === 'true') {
+                    const button = document.getElementById(codes[code]);
+                    button.classList.remove('conquered');
+                    button.innerHTML = 'Conquista Adquirida <span class="checkmark">✔</span>';
+                }
+            }
+        }
+
+        function checkAllConquests() {
+            let allConquered = true;
+            for (const code in codes) {
+                if (localStorage.getItem(codes[code]) !== 'true') {
+                    allConquered = false;
+                    break;
+                }
+            }
+
+            if (allConquered) {
+                document.querySelector('.rescue-section').style.display = 'none';
+                document.querySelector('.badges-section').style.display = 'none';
+                document.querySelector('.finished-section').style.display = 'flex';
+            } else {
+                document.querySelector('.rescue-section').style.display = 'block';
+                document.querySelector('.badges-section').style.display = 'block';
+                document.querySelector('.finished-section').style.display = 'none';
+            }
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const inputCode = document.getElementById('code-input').value.toUpperCase();
+            if (codes[inputCode]) {
+                const badgeCard = document.getElementById(codes[inputCode]).closest('.badge-card');
+                if (badgeCard) {
+                    badgeCard.classList.add('conquered');
+
+                    const button = document.getElementById(codes[inputCode]);
+                    button.classList.remove('conquered');
+                    button.innerHTML = 'Conquista Adquirida <span class="checkmark">✔</span>';
+
+                    localStorage.setItem(codes[inputCode], 'true');
+                    alert('Conquista conquistada!');
+                    checkAllConquests();
+                }
+            } else {
+                alert('Código inválido. Tente novamente.');
+            }
+
+            document.getElementById('code-input').value = '';
+        });
+
+        window.onload = function() {
+            loadBadges();
+            checkAllConquests();
+        };
+
+        document.getElementById('btnMostrar').addEventListener('click', function() {
+            document.querySelector('main').style.height = 'auto';
+            document.querySelector('main').style.flexDirection = 'column';
+            document.querySelector('.badges-section').style.display = 'block';
+        });
     </script>
 </body>
 
