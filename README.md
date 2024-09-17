@@ -13,9 +13,9 @@ Este projeto é uma página web para resgate de conquistas, onde os usuários po
 
 Os códigos de conquistas válidos e seus botões correspondentes são:
 
-- `ESTANDE1` - Conquista 1
-- `ESTANDE2` - Conquista 2
-- `ESTANDE3` - Conquista 3
+- `TOURLAB` - Conquista 1
+- `PROJARD` - Conquista 2
+- `TCCVETS` - Conquista 3
 
 ## Como Usar
 
